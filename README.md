@@ -10,10 +10,13 @@ in Prof. ACM International Conference on Future Energy Systems (e-Energy), June 
 - Paper link: http://personal.ie.cuhk.edu.hk/~dl013/paper/EETT.eEnergy.16.pdf
 - Slides link: http://personal.ie.cuhk.edu.hk/~dl013/paper/EETT.eEnergy.16.slides.pdf
 
-## Code description
-- I use C++ to implement all core parts (see [c++/src](c++/src))
+## Problem Description
+![System Model](system_model.pdf)
+ 
+## Code Description
+- I use C++ to implement all core parts (see [c++/src](c++/src)).
 - I use MATLAB to model power-speed function (see [matlab/power.speed.function.modeling](matlab/power.speed.function.modeling)),
-and process data and show figures (see [matlab/data.processing.and.show.fig](matlab/data.processing.and.show.fig))
+and process data and show figures (see [matlab/data.processing.and.show.fig](matlab/data.processing.and.show.fig)).
 
 ## Dataset
 - **Transportation Network:** We construct the [U.S. National Highway Systems (NHS)](http://courses.teresco.org/chm/graphs/usa-national.gra)
@@ -26,3 +29,5 @@ to obtain the speed limits of all road segments.
 - **Heavy-Duty Truck and Fuel Consumption Data:** We use the widely  used [ADVISOR](http://adv-vehicle-sim.sourceforge.net/advisor_doc.html)
 vehicle simulator to collection 
 fuel-consumption data for a 36-ton truck [Kenworth T800](http://www.kenworth.com/trucks/t800).
+
+## A Sample Output

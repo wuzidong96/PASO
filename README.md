@@ -11,8 +11,7 @@ in Prof. ACM International Conference on Future Energy Systems (e-Energy), June 
 - Slides link: http://personal.ie.cuhk.edu.hk/~dl013/paper/EETT.eEnergy.16.slides.pdf
 
 ## Problem Description
-<a href="System Model"><img src="system_model.png" align="middle" height="419" width="261" ></a>
-
+![System Model](system_model.png)
  
 ## Code Description
 - I use C++ to implement all core parts (see [c++/src](c++/src)).

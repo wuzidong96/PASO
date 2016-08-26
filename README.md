@@ -11,6 +11,12 @@ in Prof. ACM International Conference on Future Energy Systems (e-Energy), June 
 - Slides link: http://personal.ie.cuhk.edu.hk/~dl013/paper/EETT.eEnergy.16.slides.pdf
 
 ## Problem Description
+- We consider a heavy-duty truck travelling from the source node to the destination node across the national highway system, subject to a hard deadline constraint
+- Our goal is to minimize the truck's total fuel consumption
+- Our design spaces are:
+    - **Route planning**: select a path from the source node to the destination node
+    - **Speed planning**: optimize the running speed over each road segment
+
 ![System Model](system_model.png)
  
 ## Code Description
@@ -30,5 +36,7 @@ to obtain the speed limits of all road segments.
 vehicle simulator to collection 
 fuel-consumption data for a 36-ton truck [Kenworth T800](http://www.kenworth.com/trucks/t800).
 
-## [A Sample Output](show_path_9_22_40.html)
+## A Sample Output
 ![A Sample Output](show_path_9_22_40.png)
+- You can download the [html source file](show_path_9_22_40.html) and open it in your web browser
+to zoom in and out. 

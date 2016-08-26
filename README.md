@@ -11,7 +11,7 @@ in Prof. ACM International Conference on Future Energy Systems (e-Energy), June 
 - Slides link: http://personal.ie.cuhk.edu.hk/~dl013/paper/EETT.eEnergy.16.slides.pdf
 
 ## Problem Description
-![System Model](system_model.pdf)
+![System Model](system_model.png)
  
 ## Code Description
 - I use C++ to implement all core parts (see [c++/src](c++/src)).
@@ -30,4 +30,5 @@ to obtain the speed limits of all road segments.
 vehicle simulator to collection 
 fuel-consumption data for a 36-ton truck [Kenworth T800](http://www.kenworth.com/trucks/t800).
 
-## A Sample Output
+## [A Sample Output](show_path_9_22_40.html)
+![A Sample Output](show_path_9_22_40.png)

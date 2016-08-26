@@ -1,0 +1,423 @@
+\hypertarget{class_p_a_s_o_util}{}\section{P\+A\+S\+O\+Util Class Reference}
+\label{class_p_a_s_o_util}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+
+
+\hyperlink{class_p_a_s_o_util}{P\+A\+S\+O\+Util} contains some functions.  
+
+
+
+
+{\ttfamily \#include $<$P\+A\+S\+O\+Util.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_p_a_s_o_util_a4b10b060f12d502b21177cca0f2b078a}{construct\+Graph} (T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, const std\+::string \&node\+\_\+file, const std\+::string \&edge\+\_\+file, const std\+::string \&coef\+\_\+file, const std\+::string \&grade\+\_\+max\+\_\+speed\+\_\+file, const std\+::string \&avg\+\_\+speed\+\_\+file, const \hyperlink{class_p_a_s_o_edge_data_a30164e651874b10a410d96616c7b4077}{P\+A\+S\+O\+Edge\+Data\+::\+Speed\+Fun\+Type} \&type)
+\begin{DoxyCompactList}\small\item\em put all stuff here to construct the graph, including setting all parameters \end{DoxyCompactList}\item 
+\hypertarget{class_p_a_s_o_util_aa574b984becc3f01a866a2ac618a447d}{}static int {\bfseries read\+Node\+File} (std\+::vector$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data} $>$ \&node\+\_\+data\+\_\+v, T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, const std\+::string \&file\+\_\+name)\label{class_p_a_s_o_util_aa574b984becc3f01a866a2ac618a447d}
+
+\item 
+\hypertarget{class_p_a_s_o_util_ac03b1d8019a574e7b8d817b0cc194d42}{}static int {\bfseries read\+Edge\+File} (std\+::vector$<$ \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ \&edge\+\_\+data\+\_\+v, T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, const std\+::string \&file\+\_\+name, const \hyperlink{class_p_a_s_o_edge_data_a30164e651874b10a410d96616c7b4077}{P\+A\+S\+O\+Edge\+Data\+::\+Speed\+Fun\+Type} \&type)\label{class_p_a_s_o_util_ac03b1d8019a574e7b8d817b0cc194d42}
+
+\item 
+static int \hyperlink{class_p_a_s_o_util_ade2808c1a4bb43735ddfa2c3cef4d711}{cal\+Edge\+Properties} (T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, const std\+::map$<$ int, std\+::vector$<$ double $>$ $>$ \&grade\+\_\+coef\+\_\+m, const std\+::map$<$ int, double $>$ \&grade\+\_\+max\+\_\+speed\+\_\+m, bool do\+Random\+Speed\+Limits=false)
+\item 
+static int \hyperlink{class_p_a_s_o_util_a48376ac2e245960c957a0d0da1f49464}{read\+Avg\+Speed\+File\+And\+Update\+Max\+Speed} (T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, const std\+::string \&file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em read the average speed limit file and update the max speed \end{DoxyCompactList}\item 
+static int \hyperlink{class_p_a_s_o_util_ab6c049220ad6c0214c041820ada29b81}{read\+Grade\+Coef\+File} (std\+::map$<$ int, std\+::vector$<$ double $>$ $>$ \&grade\+\_\+coef\+\_\+m, const std\+::string \&file\+\_\+name)
+\item 
+\hypertarget{class_p_a_s_o_util_a23506c3d10fbbd005f3faddfb68b985a}{}static int \hyperlink{class_p_a_s_o_util_a23506c3d10fbbd005f3faddfb68b985a}{read\+Max\+Speed\+File} (std\+::map$<$ int, double $>$ \&grade\+\_\+max\+\_\+speed\+\_\+m, const std\+::string \&file\+\_\+name)\label{class_p_a_s_o_util_a23506c3d10fbbd005f3faddfb68b985a}
+
+\begin{DoxyCompactList}\small\item\em read the grade\+\_\+max\+\_\+speed file to update the max\+\_\+speed \end{DoxyCompactList}\item 
+static int \hyperlink{class_p_a_s_o_util_a76d5f914bc72df4297615fffeba987c2}{merge\+P\+A\+S\+O\+Net} (T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net)
+\item 
+static int \hyperlink{class_p_a_s_o_util_a6a218d9301280f7b08f6c8e380129281}{prune\+P\+A\+S\+O\+Net} (T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, int source=0, int sink=0, double T=0.\+0)
+\begin{DoxyCompactList}\small\item\em prune the transportation network \end{DoxyCompactList}\item 
+\hypertarget{class_p_a_s_o_util_a22ed037107f930c3bf819e8b27f63c86}{}static int \hyperlink{class_p_a_s_o_util_a22ed037107f930c3bf819e8b27f63c86}{prune\+P\+A\+S\+O\+Net\+To\+East} (T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, int source=0, int sink=0, double T=0.\+0)\label{class_p_a_s_o_util_a22ed037107f930c3bf819e8b27f63c86}
+
+\begin{DoxyCompactList}\small\item\em prune the transportation network to eastern U\+S \end{DoxyCompactList}\item 
+static int \hyperlink{class_p_a_s_o_util_a8ac99fd1ffb87466d5169d9984079293}{prune\+P\+A\+S\+O\+Net\+Within\+Lat\+Lon} (T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, double lat\+\_\+min, double lat\+\_\+max, double lon\+\_\+min, double lon\+\_\+max, int source=0, int sink=0, double T=0.\+0)
+\item 
+static int \hyperlink{class_p_a_s_o_util_a0e0a5a22a5001191a5eb1f786aefae63}{get\+Shortest\+Path} (const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, int source, int sink, const std\+::string \&type, std\+::vector$<$ int $>$ \&path\+\_\+o, double \&path\+\_\+cost\+\_\+o, double lambda=0)
+\begin{DoxyCompactList}\small\item\em find a shortest path \end{DoxyCompactList}\item 
+static int \hyperlink{class_p_a_s_o_util_ad73296f8ede82d7ad8b161e6b0734136}{get\+Single\+Path\+With\+Time\+Min} (const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, const std\+::vector$<$ int $>$ \&path, int source, int sink, double T, \hyperlink{class_p_a_s_o_solution}{P\+A\+S\+O\+Solution} \&sol\+\_\+o)
+\begin{DoxyCompactList}\small\item\em return the cost over a given path where each path use max speed/min time, say path.\+size() = n \end{DoxyCompactList}\item 
+static int \hyperlink{class_p_a_s_o_util_a2e6aa4dea9894893d2659d9d44d1a695}{optimize\+Single\+Path} (const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, const std\+::vector$<$ int $>$ \&path, int source, int sink, double T, \hyperlink{class_p_a_s_o_solution}{P\+A\+S\+O\+Solution} \&sol\+\_\+o)
+\begin{DoxyCompactList}\small\item\em optimize over a given path, say path.\+size() = n \end{DoxyCompactList}\item 
+static int \hyperlink{class_p_a_s_o_util_a598dc61bd2d496e38838990dfd7e9280}{optimize\+Network\+Dual} (const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, int source, int sink, double T, \hyperlink{class_p_a_s_o_solution}{P\+A\+S\+O\+Solution} \&sol\+\_\+lb\+\_\+o, \hyperlink{class_p_a_s_o_solution}{P\+A\+S\+O\+Solution} \&sol\+\_\+ub\+\_\+o)
+\begin{DoxyCompactList}\small\item\em optimize over the whole graph, say path\+\_\+o = n \end{DoxyCompactList}\item 
+static int \hyperlink{class_p_a_s_o_util_a561b5b1b2d951e3a00e2db0d9df29584}{get\+Delta\+Lambda\+Fun} (const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, int source, int sink, const std\+::string \&file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em get the delta(lambda) function and write into file\+\_\+name \end{DoxyCompactList}\item 
+static int \hyperlink{class_p_a_s_o_util_a2857dc7bc68196273db263275001e671}{write\+To\+Gra\+File} (const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, const std\+::vector$<$ int $>$ \&path, const std\+::string \&file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em write the path into gra file \end{DoxyCompactList}\item 
+\hypertarget{class_p_a_s_o_util_a93f9c2736dbde7516599f9c901186b55}{}static int \hyperlink{class_p_a_s_o_util_a93f9c2736dbde7516599f9c901186b55}{write\+Solution\+To\+File} (const \hyperlink{class_p_a_s_o_solution}{P\+A\+S\+O\+Solution} \&sol, const std\+::string \&file\+\_\+name)\label{class_p_a_s_o_util_a93f9c2736dbde7516599f9c901186b55}
+
+\begin{DoxyCompactList}\small\item\em wirte the solution into file \end{DoxyCompactList}\item 
+\hypertarget{class_p_a_s_o_util_ad46cbb0090d1e406ac8264f4c5a72cbf}{}static void \hyperlink{class_p_a_s_o_util_ad46cbb0090d1e406ac8264f4c5a72cbf}{print\+Grade\+Coef} (const std\+::map$<$ int, std\+::vector$<$ double $>$ $>$ \&grade\+\_\+coef\+\_\+m)\label{class_p_a_s_o_util_ad46cbb0090d1e406ac8264f4c5a72cbf}
+
+\begin{DoxyCompactList}\small\item\em print out some informations \end{DoxyCompactList}\item 
+\hypertarget{class_p_a_s_o_util_ac7cea435558100308c822238aa8bad7b}{}static void {\bfseries print\+Grade\+Max\+Speed} (const std\+::map$<$ int, double $>$ \&grade\+\_\+max\+\_\+speed\+\_\+m)\label{class_p_a_s_o_util_ac7cea435558100308c822238aa8bad7b}
+
+\item 
+\hypertarget{class_p_a_s_o_util_ae5ae791bb7c2c340c8bf224d5b47063e}{}static void {\bfseries print\+All\+Edge\+Fuel\+Fun} (const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, const std\+::string \&file\+\_\+name)\label{class_p_a_s_o_util_ae5ae791bb7c2c340c8bf224d5b47063e}
+
+\item 
+\hypertarget{class_p_a_s_o_util_ab119c05d45dd5fbb1a004203860339ef}{}static void {\bfseries print\+All\+Edge\+Info} (const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, const std\+::string \&file\+\_\+name)\label{class_p_a_s_o_util_ab119c05d45dd5fbb1a004203860339ef}
+
+\item 
+\hypertarget{class_p_a_s_o_util_acad92539b416977986bef90fdbfdc400}{}static void {\bfseries print\+All\+Node\+Info} (const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, const std\+::string \&file\+\_\+name)\label{class_p_a_s_o_util_acad92539b416977986bef90fdbfdc400}
+
+\item 
+\hypertarget{class_p_a_s_o_util_abb1036cbf4196126605577533ce9aded}{}static void {\bfseries print\+N\+Stats} (const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net)\label{class_p_a_s_o_util_abb1036cbf4196126605577533ce9aded}
+
+\item 
+\hypertarget{class_p_a_s_o_util_afd052a076f1c4b31ad1713b2a4624dde}{}static int \hyperlink{class_p_a_s_o_util_afd052a076f1c4b31ad1713b2a4624dde}{set\+Random\+Speed\+Limits} (double \&speed\+\_\+min, double \&speed\+\_\+max)\label{class_p_a_s_o_util_afd052a076f1c4b31ad1713b2a4624dde}
+
+\begin{DoxyCompactList}\small\item\em randomly set the speed limits \end{DoxyCompactList}\item 
+static bool \hyperlink{class_p_a_s_o_util_adb72756ff43f7e9f46560fdbff089597}{test\+Procedure} (T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, int source, int sink, double T, double lb, double ub, double delta, \hyperlink{class_p_a_s_o_solution}{P\+A\+S\+O\+Solution} \&sol\+\_\+o, long elapsed\+\_\+time\+\_\+second\+\_\+o, double memory\+\_\+usage\+\_\+\+G\+B\+\_\+o)
+\begin{DoxyCompactList}\small\item\em the test procedure \end{DoxyCompactList}\item 
+\hypertarget{class_p_a_s_o_util_a584075fefe05c92fa179aca7e91534e5}{}static int \hyperlink{class_p_a_s_o_util_a584075fefe05c92fa179aca7e91534e5}{approximation\+Scheme} (T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, int source, int sink, double T, double lb, double ub, double epsilon, \hyperlink{class_p_a_s_o_solution}{P\+A\+S\+O\+Solution} \&sol\+\_\+o)\label{class_p_a_s_o_util_a584075fefe05c92fa179aca7e91534e5}
+
+\begin{DoxyCompactList}\small\item\em the approximation scheme \end{DoxyCompactList}\item 
+\hypertarget{class_p_a_s_o_util_a18673a185c3d6d5702cf4245f6b17fed}{}static int \hyperlink{class_p_a_s_o_util_a18673a185c3d6d5702cf4245f6b17fed}{get\+Node\+From22\+Node\+File} (int idx, const std\+::string \&file\+\_\+name)\label{class_p_a_s_o_util_a18673a185c3d6d5702cf4245f6b17fed}
+
+\begin{DoxyCompactList}\small\item\em get the real node id from the idx \mbox{[}1 to 22\mbox{]} \end{DoxyCompactList}\item 
+static int \hyperlink{class_p_a_s_o_util_a57825bcf6126c4423c5f1e59c5f9f3d9}{run\+One\+Instance} (const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ \hyperlink{class_p_a_s_o_node_data}{P\+A\+S\+O\+Node\+Data}, \hyperlink{class_p_a_s_o_edge_data}{P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&P\+Net, int source, int sink, double T, const std\+::string \&path\+\_\+fastest\+\_\+gra\+\_\+file, const std\+::string \&path\+\_\+shortest\+\_\+gra\+\_\+file, const std\+::string \&path\+\_\+lb\+\_\+gra\+\_\+file, const std\+::string \&path\+\_\+ub\+\_\+gra\+\_\+file, const std\+::string \&path\+\_\+opt\+\_\+gra\+\_\+file, const std\+::string \&sol\+\_\+fastest\+\_\+path\+\_\+time\+\_\+min\+\_\+file, const std\+::string \&sol\+\_\+fastest\+\_\+path\+\_\+opt\+\_\+file, const std\+::string \&sol\+\_\+shortest\+\_\+path\+\_\+time\+\_\+min\+\_\+file, const std\+::string \&sol\+\_\+shortest\+\_\+path\+\_\+opt\+\_\+file, const std\+::string \&sol\+\_\+lb\+\_\+file, const std\+::string \&sol\+\_\+ub\+\_\+file, const std\+::string \&sol\+\_\+opt\+\_\+file, const std\+::string \&info\+\_\+file)
+\begin{DoxyCompactList}\small\item\em one instance, running a (source, sink T) instance and write the result to the input files \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_p_a_s_o_util}{P\+A\+S\+O\+Util} contains some functions. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_p_a_s_o_util_ade2808c1a4bb43735ddfa2c3cef4d711}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!cal\+Edge\+Properties@{cal\+Edge\+Properties}}
+\index{cal\+Edge\+Properties@{cal\+Edge\+Properties}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{cal\+Edge\+Properties}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::cal\+Edge\+Properties (
+\begin{DoxyParamCaption}
+\item[{T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{const std\+::map$<$ int, std\+::vector$<$ double $>$ $>$ \&}]{grade\+\_\+coef\+\_\+m, }
+\item[{const std\+::map$<$ int, double $>$ \&}]{grade\+\_\+max\+\_\+speed\+\_\+m, }
+\item[{bool}]{do\+Random\+Speed\+Limits = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_ade2808c1a4bb43735ddfa2c3cef4d711}
+all of here are in units of meters
+
+we should set distance in xyz-\/plane in units of miles
+
+we consider speed in untis of mph we should set it later!!
+
+get speed limits randomly
+
+travel time is in units of hours
+
+round grade to the earliest level Note that grade is in percentage, e.\+g., grade=6 means 6\% slope. But in our $<$grade, coef\+\_\+v$>$ map, each grade\+\_\+key is 10$\ast$grade, an int type.
+
+update the max speed here
+
+update the max speed \hypertarget{class_p_a_s_o_util_a4b10b060f12d502b21177cca0f2b078a}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!construct\+Graph@{construct\+Graph}}
+\index{construct\+Graph@{construct\+Graph}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{construct\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::construct\+Graph (
+\begin{DoxyParamCaption}
+\item[{T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{const std\+::string \&}]{node\+\_\+file, }
+\item[{const std\+::string \&}]{edge\+\_\+file, }
+\item[{const std\+::string \&}]{coef\+\_\+file, }
+\item[{const std\+::string \&}]{grade\+\_\+max\+\_\+speed\+\_\+file, }
+\item[{const std\+::string \&}]{avg\+\_\+speed\+\_\+file, }
+\item[{const {\bf P\+A\+S\+O\+Edge\+Data\+::\+Speed\+Fun\+Type} \&}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_a4b10b060f12d502b21177cca0f2b078a}
+
+
+put all stuff here to construct the graph, including setting all parameters 
+
+only happens in the case min\+\_\+speed == max\+\_\+speed
+
+we have finished to construct the graph, print information \hypertarget{class_p_a_s_o_util_a561b5b1b2d951e3a00e2db0d9df29584}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!get\+Delta\+Lambda\+Fun@{get\+Delta\+Lambda\+Fun}}
+\index{get\+Delta\+Lambda\+Fun@{get\+Delta\+Lambda\+Fun}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{get\+Delta\+Lambda\+Fun}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::get\+Delta\+Lambda\+Fun (
+\begin{DoxyParamCaption}
+\item[{const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{int}]{source, }
+\item[{int}]{sink, }
+\item[{const std\+::string \&}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_a561b5b1b2d951e3a00e2db0d9df29584}
+
+
+get the delta(lambda) function and write into file\+\_\+name 
+
+get delta \hypertarget{class_p_a_s_o_util_a0e0a5a22a5001191a5eb1f786aefae63}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!get\+Shortest\+Path@{get\+Shortest\+Path}}
+\index{get\+Shortest\+Path@{get\+Shortest\+Path}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{get\+Shortest\+Path}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::get\+Shortest\+Path (
+\begin{DoxyParamCaption}
+\item[{const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{int}]{source, }
+\item[{int}]{sink, }
+\item[{const std\+::string \&}]{type, }
+\item[{std\+::vector$<$ int $>$ \&}]{path\+\_\+o, }
+\item[{double \&}]{path\+\_\+cost\+\_\+o, }
+\item[{double}]{lambda = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_a0e0a5a22a5001191a5eb1f786aefae63}
+
+
+find a shortest path 
+
+We follow the pseudocode here.
+
+1 function Dijkstra(\+Graph, source)\+: 2 3 create vertex set Q 4 5 for each vertex v in Graph\+: // Initialization 6 dist\mbox{[}v\mbox{]} ← I\+N\+F\+I\+N\+I\+T\+Y // Unknown distance from source to v 7 prev\mbox{[}v\mbox{]} ← U\+N\+D\+E\+F\+I\+N\+E\+D // Previous node in optimal path from source 8 add v to Q // All nodes initially in Q (unvisited nodes) 9 10 dist\mbox{[}source\mbox{]} ← 0 // Distance from source to source 11 12 while Q is not empty\+: 13 u ← vertex in Q with min dist\mbox{[}u\mbox{]} // Source node will be selected first 14 remove u from Q 15 16 for each neighbor v of u\+: // where v is still in Q. 17 alt ← dist\mbox{[}u\mbox{]} + length(u, v) 18 if alt $<$ dist\mbox{[}v\mbox{]}\+: // A shorter path to v has been found 19 dist\mbox{[}v\mbox{]} ← alt 20 prev\mbox{[}v\mbox{]} ← u 21 22 return dist\mbox{[}\mbox{]}, prev\mbox{[}\mbox{]}
+
+If we are only interested in a shortest path between vertices source and target, we can terminate the search after line 13 if u = target. Now we can read the shortest path from source to target by reverse iteration\+: initialize. Note that node id is not required
+
+T\+O\+D\+O\+: we can implement not\+\_\+visited\+\_\+l as a priority queue
+
+main loop
+
+find the node with minimal weight
+
+output result
+
+remember to push source into the list!!! \hypertarget{class_p_a_s_o_util_ad73296f8ede82d7ad8b161e6b0734136}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!get\+Single\+Path\+With\+Time\+Min@{get\+Single\+Path\+With\+Time\+Min}}
+\index{get\+Single\+Path\+With\+Time\+Min@{get\+Single\+Path\+With\+Time\+Min}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{get\+Single\+Path\+With\+Time\+Min}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::get\+Single\+Path\+With\+Time\+Min (
+\begin{DoxyParamCaption}
+\item[{const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{const std\+::vector$<$ int $>$ \&}]{path, }
+\item[{int}]{source, }
+\item[{int}]{sink, }
+\item[{double}]{T, }
+\item[{{\bf P\+A\+S\+O\+Solution} \&}]{sol\+\_\+o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_ad73296f8ede82d7ad8b161e6b0734136}
+
+
+return the cost over a given path where each path use max speed/min time, say path.\+size() = n 
+
+number of nodes in the path
+
+number of edges/links over the path \hypertarget{class_p_a_s_o_util_a76d5f914bc72df4297615fffeba987c2}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!merge\+P\+A\+S\+O\+Net@{merge\+P\+A\+S\+O\+Net}}
+\index{merge\+P\+A\+S\+O\+Net@{merge\+P\+A\+S\+O\+Net}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{merge\+P\+A\+S\+O\+Net}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::merge\+P\+A\+S\+O\+Net (
+\begin{DoxyParamCaption}
+\item[{T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_a76d5f914bc72df4297615fffeba987c2}
+merge the P\+A\+S\+O network according to the edge grade\+\_\+key For any edge (u,v), when v has only one outgoing edge, say (v,w), except (v,u), we will merge (u,v) and (v,w) into (u,w) and delete node v. Note that we also need to construct edge (w,u) The grade will be set as the average of them. The min/max speed will also be set as the average of them. remember first prune all invalid edges
+
+edge (src, des)
+
+same grade key
+
+the forward direction
+
+the reverse direction \hypertarget{class_p_a_s_o_util_a598dc61bd2d496e38838990dfd7e9280}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!optimize\+Network\+Dual@{optimize\+Network\+Dual}}
+\index{optimize\+Network\+Dual@{optimize\+Network\+Dual}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{optimize\+Network\+Dual}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::optimize\+Network\+Dual (
+\begin{DoxyParamCaption}
+\item[{const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{int}]{source, }
+\item[{int}]{sink, }
+\item[{double}]{T, }
+\item[{{\bf P\+A\+S\+O\+Solution} \&}]{sol\+\_\+lb\+\_\+o, }
+\item[{{\bf P\+A\+S\+O\+Solution} \&}]{sol\+\_\+ub\+\_\+o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_a598dc61bd2d496e38838990dfd7e9280}
+
+
+optimize over the whole graph, say path\+\_\+o = n 
+
+here sum\+\_\+time\+\_\+min $<$ T $<$ sum\+\_\+time\+\_\+max we use binary search to find a lambda such that delta(lambda) = 0
+
+initialize a sufficiently large lambda\+\_\+ub
+
+begin at any one side
+
+do not use std\+::fabs, which will convert double to float!!
+
+get delta
+
+T is very large can be satisfied now and get the optimal solution, which is the delay-\/unconstrained optimal solution
+
+T is very small, cannot achieve such delay, infeasible \hypertarget{class_p_a_s_o_util_a2e6aa4dea9894893d2659d9d44d1a695}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!optimize\+Single\+Path@{optimize\+Single\+Path}}
+\index{optimize\+Single\+Path@{optimize\+Single\+Path}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{optimize\+Single\+Path}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::optimize\+Single\+Path (
+\begin{DoxyParamCaption}
+\item[{const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{const std\+::vector$<$ int $>$ \&}]{path, }
+\item[{int}]{source, }
+\item[{int}]{sink, }
+\item[{double}]{T, }
+\item[{{\bf P\+A\+S\+O\+Solution} \&}]{sol\+\_\+o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_a2e6aa4dea9894893d2659d9d44d1a695}
+
+
+optimize over a given path, say path.\+size() = n 
+
+number of nodes in the path
+
+number of edges/links over the path
+
+pre-\/processing
+
+here sum\+\_\+time\+\_\+min $<$ T $<$ sum\+\_\+time\+\_\+max we use binary search to find a lambda such that delta(lambda) = 0
+
+initialize a sufficiently large lambda\+\_\+ub
+
+begin at any one side
+
+do not use std\+::fabs, which will convert double to float!!
+
+get delta, and keep update time\+\_\+o \hypertarget{class_p_a_s_o_util_a6a218d9301280f7b08f6c8e380129281}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!prune\+P\+A\+S\+O\+Net@{prune\+P\+A\+S\+O\+Net}}
+\index{prune\+P\+A\+S\+O\+Net@{prune\+P\+A\+S\+O\+Net}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{prune\+P\+A\+S\+O\+Net}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::prune\+P\+A\+S\+O\+Net (
+\begin{DoxyParamCaption}
+\item[{T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{int}]{source = {\ttfamily 0}, }
+\item[{int}]{sink = {\ttfamily 0}, }
+\item[{double}]{T = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_a6a218d9301280f7b08f6c8e380129281}
+
+
+prune the transportation network 
+
+first prune all invalid edges \hypertarget{class_p_a_s_o_util_a8ac99fd1ffb87466d5169d9984079293}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!prune\+P\+A\+S\+O\+Net\+Within\+Lat\+Lon@{prune\+P\+A\+S\+O\+Net\+Within\+Lat\+Lon}}
+\index{prune\+P\+A\+S\+O\+Net\+Within\+Lat\+Lon@{prune\+P\+A\+S\+O\+Net\+Within\+Lat\+Lon}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{prune\+P\+A\+S\+O\+Net\+Within\+Lat\+Lon}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::prune\+P\+A\+S\+O\+Net\+Within\+Lat\+Lon (
+\begin{DoxyParamCaption}
+\item[{T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{double}]{lat\+\_\+min, }
+\item[{double}]{lat\+\_\+max, }
+\item[{double}]{lon\+\_\+min, }
+\item[{double}]{lon\+\_\+max, }
+\item[{int}]{source = {\ttfamily 0}, }
+\item[{int}]{sink = {\ttfamily 0}, }
+\item[{double}]{T = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_a8ac99fd1ffb87466d5169d9984079293}
+prune the transportation network within given lat lon such that all nodes are in the region \mbox{[}lat\+\_\+min, lat\+\_\+max\mbox{]}x\mbox{[}lon\+\_\+min, lon\+\_\+max\mbox{]} \hypertarget{class_p_a_s_o_util_a48376ac2e245960c957a0d0da1f49464}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!read\+Avg\+Speed\+File\+And\+Update\+Max\+Speed@{read\+Avg\+Speed\+File\+And\+Update\+Max\+Speed}}
+\index{read\+Avg\+Speed\+File\+And\+Update\+Max\+Speed@{read\+Avg\+Speed\+File\+And\+Update\+Max\+Speed}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{read\+Avg\+Speed\+File\+And\+Update\+Max\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::read\+Avg\+Speed\+File\+And\+Update\+Max\+Speed (
+\begin{DoxyParamCaption}
+\item[{T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{const std\+::string \&}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_a48376ac2e245960c957a0d0da1f49464}
+
+
+read the average speed limit file and update the max speed 
+
+keep in mind that we only update when the original max speed is larger than the avg speed!! \hypertarget{class_p_a_s_o_util_ab6c049220ad6c0214c041820ada29b81}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!read\+Grade\+Coef\+File@{read\+Grade\+Coef\+File}}
+\index{read\+Grade\+Coef\+File@{read\+Grade\+Coef\+File}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{read\+Grade\+Coef\+File}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::read\+Grade\+Coef\+File (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ int, std\+::vector$<$ double $>$ $>$ \&}]{grade\+\_\+coef\+\_\+m, }
+\item[{const std\+::string \&}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_ab6c049220ad6c0214c041820ada29b81}
+read the grade\+\_\+coeff file and construct a map where the key is 10$\ast$grade (change it to int type) and the value is a double vector (coefa, coefb, coefc, coefd) \hypertarget{class_p_a_s_o_util_a57825bcf6126c4423c5f1e59c5f9f3d9}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!run\+One\+Instance@{run\+One\+Instance}}
+\index{run\+One\+Instance@{run\+One\+Instance}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{run\+One\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::run\+One\+Instance (
+\begin{DoxyParamCaption}
+\item[{const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{int}]{source, }
+\item[{int}]{sink, }
+\item[{double}]{T, }
+\item[{const std\+::string \&}]{path\+\_\+fastest\+\_\+gra\+\_\+file, }
+\item[{const std\+::string \&}]{path\+\_\+shortest\+\_\+gra\+\_\+file, }
+\item[{const std\+::string \&}]{path\+\_\+lb\+\_\+gra\+\_\+file, }
+\item[{const std\+::string \&}]{path\+\_\+ub\+\_\+gra\+\_\+file, }
+\item[{const std\+::string \&}]{path\+\_\+opt\+\_\+gra\+\_\+file, }
+\item[{const std\+::string \&}]{sol\+\_\+fastest\+\_\+path\+\_\+time\+\_\+min\+\_\+file, }
+\item[{const std\+::string \&}]{sol\+\_\+fastest\+\_\+path\+\_\+opt\+\_\+file, }
+\item[{const std\+::string \&}]{sol\+\_\+shortest\+\_\+path\+\_\+time\+\_\+min\+\_\+file, }
+\item[{const std\+::string \&}]{sol\+\_\+shortest\+\_\+path\+\_\+opt\+\_\+file, }
+\item[{const std\+::string \&}]{sol\+\_\+lb\+\_\+file, }
+\item[{const std\+::string \&}]{sol\+\_\+ub\+\_\+file, }
+\item[{const std\+::string \&}]{sol\+\_\+opt\+\_\+file, }
+\item[{const std\+::string \&}]{info\+\_\+file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_a57825bcf6126c4423c5f1e59c5f9f3d9}
+
+
+one instance, running a (source, sink T) instance and write the result to the input files 
+
+fastest path and shortest path and optimal path
+
+minimal travel time
+
+minimal travel distance
+
+five solutions
+
+lb and ub for O\+P\+T, should be determined by \hyperlink{class_p_a_s_o_util_a598dc61bd2d496e38838990dfd7e9280}{optimize\+Network\+Dual()}
+
+get the fastest path here
+
+terminate if sum\+\_\+time\+\_\+min is larger than T
+
+terminate if T is larger than sum\+\_\+time\+\_\+min+10
+
+do not optimize the fastest path, but just use the max speed (min time) over the fastest path
+
+optimize the fastest path
+
+write to fastest path into gra file
+
+get the shortest path here
+
+do not optimize the shortest path, but just use the max speed (min time) over the shortest path
+
+optimize the shortest path
+
+write to shortest path into gra file
+
+get the optimal path via dual solution
+
+write to optimal path into gra file
+
+write into csv file, with the following items
+
+output to std\+::cout for checking \hypertarget{class_p_a_s_o_util_adb72756ff43f7e9f46560fdbff089597}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!test\+Procedure@{test\+Procedure}}
+\index{test\+Procedure@{test\+Procedure}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{test\+Procedure}]{\setlength{\rightskip}{0pt plus 5cm}bool P\+A\+S\+O\+Util\+::test\+Procedure (
+\begin{DoxyParamCaption}
+\item[{T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{int}]{source, }
+\item[{int}]{sink, }
+\item[{double}]{T, }
+\item[{double}]{lb, }
+\item[{double}]{ub, }
+\item[{double}]{delta, }
+\item[{{\bf P\+A\+S\+O\+Solution} \&}]{sol\+\_\+o, }
+\item[{long}]{elapsed\+\_\+time\+\_\+second\+\_\+o, }
+\item[{double}]{memory\+\_\+usage\+\_\+\+G\+B\+\_\+o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_adb72756ff43f7e9f46560fdbff089597}
+
+
+the test procedure 
+
+print g
+
+remember to push source into the list!!! \hypertarget{class_p_a_s_o_util_a2857dc7bc68196273db263275001e671}{}\index{P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}!write\+To\+Gra\+File@{write\+To\+Gra\+File}}
+\index{write\+To\+Gra\+File@{write\+To\+Gra\+File}!P\+A\+S\+O\+Util@{P\+A\+S\+O\+Util}}
+\subsubsection[{write\+To\+Gra\+File}]{\setlength{\rightskip}{0pt plus 5cm}int P\+A\+S\+O\+Util\+::write\+To\+Gra\+File (
+\begin{DoxyParamCaption}
+\item[{const T\+Pt$<$ T\+Node\+E\+Dat\+Net$<$ {\bf P\+A\+S\+O\+Node\+Data}, {\bf P\+A\+S\+O\+Edge\+Data} $>$ $>$ \&}]{P\+Net, }
+\item[{const std\+::vector$<$ int $>$ \&}]{path, }
+\item[{const std\+::string \&}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_p_a_s_o_util_a2857dc7bc68196273db263275001e671}
+
+
+write the path into gra file 
+
+write a path (which consists a sequence of nodes) into a gra file note that we increment idx here!! 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+P\+A\+S\+O\+Util.\+h\item 
+P\+A\+S\+O\+Util.\+cpp\end{DoxyCompactItemize}

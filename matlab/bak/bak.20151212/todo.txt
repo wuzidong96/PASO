@@ -1,0 +1,3 @@
+find all possible s-t paths 
+and get the optiaml energy cost for each path 
+and then get the optimal path.

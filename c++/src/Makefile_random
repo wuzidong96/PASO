@@ -1,0 +1,57 @@
+SNAPROOT = /data/grad/dl013/software/Snap-2.4
+GEOROOT = /data/grad/dl013/software/GeographicLib-1.45/install
+
+CGEO = $(GEOROOT)/include
+GEOLIB = $(GEOROOT)/lib
+
+GLIB = glib-core
+SNAP = snap-core
+GLIBADV = glib-adv
+SNAPADV = snap-adv
+SNAPEXP = snap-exp
+
+CGLIB = $(SNAPROOT)/$(GLIB)
+CSNAP = $(SNAPROOT)/$(SNAP)
+
+#copied from SNAP Makefile.config
+CC = g++
+CXXFLAGS += -std=c++98 -Wall
+CXXFLAGS += -O3 -DNDEBUG
+# turn on for crash debugging, get symbols with <prog> 2>&1 | c++filt
+#CXXFLAGS += -g -rdynamic
+CXXOPENMP = -fopenmp
+LDFLAGS +=
+LIBS += -lrt
+
+#for  geographic
+LIBS += -lGeographic
+
+INC += -I$(CSNAP)
+INC += -I$(CGLIB)
+INC += -I$(CGEO)
+LIBINC += -L$(GEOLIB)
+
+SRCS = \
+PASONodeData.cpp\
+PASOEdgeData.cpp\
+PASOUtil.cpp\
+main_random_max_speed.cpp
+
+OBJS = $(SRCS:.cpp=.o)
+	
+## Main application file
+TAR = \
+	main_random_max_speed
+
+all: $(TAR)
+
+# COMPILE
+$(TAR): $(OBJS)
+	$(CC) $(CXXFLAGS) $(INC) $(LIBINC) $(LDFLAGS) $(CSNAP)/Snap.o $(OBJS) $(LIBS) -o $@ 
+
+%.o: %.cpp
+	$(CC) $(CXXFLAGS) $(INC) $(LIBINC) $(LDFLAGS) $(LIBS) -o $@ -c $<
+
+clean:
+	rm -f *.o $(TAR)
+

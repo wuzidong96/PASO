@@ -1,0 +1,45 @@
+SNAPROOT = /data/grad/dl013/software/Snap-2.4
+
+GLIB = glib-core
+SNAP = snap-core
+GLIBADV = glib-adv
+SNAPADV = snap-adv
+SNAPEXP = snap-exp
+
+CGLIB = $(SNAPROOT)/$(GLIB)
+CSNAP = $(SNAPROOT)/$(SNAP)
+
+#copied from SNAP Makefile.config
+CC = g++
+CXXFLAGS += -std=c++98 -Wall
+CXXFLAGS += -O3 -DNDEBUG
+# turn on for crash debugging, get symbols with <prog> 2>&1 | c++filt
+#CXXFLAGS += -g -rdynamic
+CXXOPENMP = -fopenmp
+LDFLAGS +=
+LIBS += -lrt
+
+SRCS = \
+PASONodeData.cpp\
+PASOEdgeData.cpp\
+test.cpp
+
+OBJS = $(SRCS:.cpp=.o)
+	
+## Main application file
+TAR = \
+	test
+
+all: $(TAR)
+
+# COMPILE
+$(TAR): $(OBJS)
+	$(CC) $(CXXFLAGS) $(CSNAP)/Snap.o $(OBJS) -I$(CSNAP) -I$(CGLIB) $(LDFLAGS) $(LIBS) -o $@
+
+
+%.o: %.cpp
+	$(CC) $(CXXFLAGS) -I$(CSNAP) -I$(CGLIB) $(LDFLAGS) $(LIBS) -o $@ -c $<
+
+clean:
+	rm -f *.o $(TAR)
+

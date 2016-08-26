@@ -39,4 +39,4 @@ fuel-consumption data for a 36-ton truck [Kenworth T800](http://www.kenworth.com
 ## A Sample Output
 ![A Sample Output](show_path_9_22_40.png)
 - You can download the [html source file](show_path_9_22_40.html) and open it in your web browser
-to zoom in and out. 
+to zoom in the map to see more details. 

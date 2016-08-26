@@ -11,6 +11,9 @@ in Prof. ACM International Conference on Future Energy Systems (e-Energy), June 
 - Slides link: http://personal.ie.cuhk.edu.hk/~dl013/paper/EETT.eEnergy.16.slides.pdf
 
 ## Problem Description
+
+<a href="System Model"><img src="system_model.png" align="left" height="48" width="48" ></a>
+
 ![System Model](system_model.png)
  
 ## Code Description

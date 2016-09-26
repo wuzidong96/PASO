@@ -441,7 +441,7 @@ PASOUtil::prunePASONet(TPt <TNodeEDatNet<PASONodeData, PASOEdgeData> >& PNet,
             //we direct EI to the next edge after deleting this edge from the graph
             PNet->DelEdge(src, des);
             n_edge_invalid++;
-            std::cout << " not valid, thus delete edge(" << src << "," << des << ")" << std::endl;
+            //std::cout << " not valid, thus delete edge(" << src << "," << des << ")" << std::endl;
             EI = PNet->BegEI(); //start from the new graph again
             continue; 
         }

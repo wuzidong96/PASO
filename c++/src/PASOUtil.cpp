@@ -414,6 +414,9 @@ PASOUtil::prunePASONet(TPt <TNodeEDatNet<PASONodeData, PASOEdgeData> >& PNet,
 {
     ///first prune all invalid edges
     int n_edge_invalid = 0;
+    
+    ///before 20150925, here I did not handle EI correctly
+    /*
     for (TNodeEDatNet< PASONodeData, PASOEdgeData >::TEdgeI EI = PNet->BegEI(); EI < PNet->EndEI(); EI++)
     {
         int src = EI.GetSrcNId();
@@ -422,10 +425,29 @@ PASOUtil::prunePASONet(TPt <TNodeEDatNet<PASONodeData, PASOEdgeData> >& PNet,
         {
             PNet->DelEdge(src, des);
             n_edge_invalid++;
-            //std::cout << " not valid, thus delete edge(" << src << "," << des << ")" << std::endl;
+            // std::cout << " not valid, thus delete edge(" << src << "," << des << ")" << std::endl;
             continue;
         }  
     }
+    */
+    
+    TNodeEDatNet< PASONodeData, PASOEdgeData >::TEdgeI EI = PNet->BegEI();
+    while (EI < PNet->EndEI())
+    {
+        int src = EI.GetSrcNId();
+        int des = EI.GetDstNId();
+        if(EI.GetDat().isValid() == false)
+        {            
+            //we direct EI to the next edge after deleting this edge from the graph
+            PNet->DelEdge(src, des);
+            n_edge_invalid++;
+            std::cout << " not valid, thus delete edge(" << src << "," << des << ")" << std::endl;
+            EI = PNet->BegEI(); //start from the new graph again
+            continue; 
+        }
+        EI++;
+    }
+
     std::cout << "prunePASONet: n_edge_invalid=" << n_edge_invalid << std::endl;
 /*** Do not prune nodes, it takes a lot of time!
     int n_node_not_feasible_in_time = 0;

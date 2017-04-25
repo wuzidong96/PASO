@@ -223,6 +223,12 @@ class PASOUtil
     //from the input finename
     static int getNodeFrom22NodeFile(int idx, 
                                      const std::string& file_name);
+	
+	///get the real node id from the idx [1 to 40] 
+    //from the input finename
+    static int getNodeFrom40NodeFile(int idx, 
+                                     const std::string& file_name);
+									 
     
     ///one instance, running a (source, sink T) instance and write the result to the input files
     static int runOneInstance(const TPt <TNodeEDatNet<PASONodeData, PASOEdgeData> >& PNet,

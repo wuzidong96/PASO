@@ -285,6 +285,47 @@ PASOUtil::getNodeFrom22NodeFile(int idx,
 }
 
 int 
+PASOUtil::getNodeFrom40NodeFile(int idx, 
+                                const std::string& file_name)
+{
+    if(idx < 1 || idx > 40)
+    {
+        std::cout << "invalid idx, should be in [1,40]" << std::endl;
+        return -1;
+    }
+    std::ifstream ifs;
+    ifs.open(file_name.c_str(), std::ifstream::in);
+    if(!ifs.good())
+    {
+        std::cout <<"cannot open " << file_name << std::endl;
+        return -1;
+    }
+    std::cout << "getNodeFrom40NodeFile " << file_name << std::endl;
+    while(ifs.good())
+    {
+        std::string one_line;
+        std::getline(ifs, one_line);
+        //std::cout << "get line: " << one_line << std::endl;
+        
+        if(one_line.empty())
+        {
+            std::cout << "get an empty line" << std::endl;
+            continue;
+        }
+        
+        std::istringstream iss(one_line); 
+        int input_idx = 0, node_idx = 0;
+        double lat=0, lon = 0;
+        iss >> input_idx >> node_idx >> lat >> lon;
+        if(input_idx == idx)
+        {
+            return node_idx;
+        }     
+    }
+    return 0;    
+}
+
+int 
 PASOUtil::calEdgeProperties(TPt <TNodeEDatNet<PASONodeData, PASOEdgeData> >& PNet,
                             const std::map< int, std::vector<double> > &grade_coef_m,
                             const std::map< int, double >& grade_max_speed_m,

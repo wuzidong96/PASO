@@ -2,7 +2,7 @@ close all; clear all;
 
 all_info_data = csvread('data/info_T800.csv');
 
-b = getOneSourceSinkInfo('data/info_T800.csv',9,22);
+b = getOneSourceSinkInfo('data/info_T800.csv',1,2);
 
 %delay = 40
 c = b(4,:);

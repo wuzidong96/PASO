@@ -98,12 +98,12 @@ int main(int argc, char* argv[])
     ret = PASOUtil::prunePASONet(PNet, source, sink, T);          
 /*============================================ prune the graph to east============================================*/
     ///prune the network to east
-    ret = PASOUtil::prunePASONetToEast(PNet, source, sink, T); 
+//    ret = PASOUtil::prunePASONetToEast(PNet, source, sink, T); 
 /*============================================ merge the graph ============================================*/
     ret = PASOUtil::mergePASONet(PNet); 
   //  PASOUtil::printAllEdgeFuelFun(PNet, "data/edge_fuel_fun_info.csv");
   //  PASOUtil::printAllNodeInfo(PNet, "data/node_info_T800.csv");
-   // PASOUtil::printAllEdgeInfo(PNet,"data/edge_info_T800.csv");      
+  //  PASOUtil::printAllEdgeInfo(PNet,"data/edge_info_T800.csv");      
 /* ========================================== rough check ================================================*/
     if(!PNet->IsNode(source) ||
        !PNet->IsNode(sink))

@@ -394,8 +394,8 @@ PASOUtil::calEdgeProperties(TPt <TNodeEDatNet<PASONodeData, PASOEdgeData> >& PNe
         
         if(mi == grade_coef_m.end())
         {
-          //  std::cout << "cannot find grade key=" << grade_key << " for grade=" 
-          //            << grade << std::endl;
+            //std::cout << "cannot find grade key=" << grade_key << " for grade=" 
+            //          << grade << std::endl;
             EI.GetDat().setValid(false);
             double inf = std::numeric_limits<double>::infinity();
             EI.GetDat().setCoefA(inf);
@@ -427,7 +427,12 @@ PASOUtil::calEdgeProperties(TPt <TNodeEDatNet<PASONodeData, PASOEdgeData> >& PNe
             {
                 if(grade_max_speed < EI.GetDat().getSpeedMin()) //speed_min > grade_max_speed
                 {
-                    EI.GetDat().setValid(false);
+					//std::cout << "speed_min > grade_max_speed" << std::endl;
+					EI.GetDat().setSpeedMin(grade_max_speed);
+					EI.GetDat().setSpeedMax(grade_max_speed);
+					EI.GetDat().setTimeMin(EI.GetDat().getDistance()/grade_max_speed);
+					EI.GetDat().setTimeMax(EI.GetDat().getDistance()/grade_max_speed);
+                    //EI.GetDat().setValid(false);
                 }
                 else //speed_min <= grade_max_speed <= speed_max
                 {

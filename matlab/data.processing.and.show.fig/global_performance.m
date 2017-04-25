@@ -107,6 +107,45 @@ avg_diff_S_SO_fuel_perc = mean(diff_S_SO_fuel_perc)
 avg_diff_UB_fuel_perc = mean(diff_UB_fuel_perc)
 
 
+%% everything (time, distance, fuel) is based on the fatest path algorithm
+% we use extention "_2" to distingush with the above metrics
+diff_F_SO_time_perc_2 = (F_SO_time - F_time)*100./F_time;
+diff_S_time_perc_2 = (S_time - F_time)*100./F_time;
+diff_S_SO_time_perc_2 = (S_SO_time - F_time)*100./F_time;
+diff_LB_time_perc_2 = (LB_time - F_time)*100./F_time;
+diff_UB_time_perc_2 = (UB_time - F_time)*100./F_time;
+
+avg_diff_F_SO_time_perc_2 = mean(diff_F_SO_time_perc_2)
+avg_diff_S_time_perc_2 = mean(diff_S_time_perc_2)
+avg_diff_S_SO_time_perc_2 = mean(diff_S_SO_time_perc_2)
+avg_diff_LB_time_perc_2 = mean(diff_LB_time_perc_2)
+avg_diff_UB_time_perc_2 = mean(diff_UB_time_perc_2)
+
+diff_F_SO_dist_perc_2 = (F_SO_dist - F_dist)*100./F_dist;
+diff_S_dist_perc_2 = (S_dist - F_dist)*100./F_dist;
+diff_S_SO_dist_perc_2 = (S_SO_dist - F_dist)*100./F_dist;
+diff_LB_dist_perc_2 = (LB_dist - F_dist)*100./F_dist;
+diff_UB_dist_perc_2 = (UB_dist - F_dist)*100./F_dist;
+
+avg_diff_F_SO_dist_perc_2 = mean(diff_F_SO_dist_perc_2)
+avg_diff_S_dist_perc_2 = mean(diff_S_dist_perc_2)
+avg_diff_S_SO_dist_perc_2 = mean(diff_S_SO_dist_perc_2)
+avg_diff_LB_dist_perc_2 = mean(diff_LB_dist_perc_2)
+avg_diff_UB_dist_perc_2 = mean(diff_UB_dist_perc_2)
+
+diff_F_SO_fuel_perc_2 = (F_SO_fuel - F_fuel)*100./F_fuel;
+diff_S_fuel_perc_2 = (S_fuel - F_fuel)*100./F_fuel;
+diff_S_SO_fuel_perc_2 = (S_SO_fuel - F_fuel)*100./F_fuel;
+diff_LB_fuel_perc_2 = (LB_fuel - F_fuel)*100./F_fuel;
+diff_UB_fuel_perc_2 = (UB_fuel - F_fuel)*100./F_fuel;
+
+avg_diff_F_SO_fuel_perc_2 = mean(diff_F_SO_fuel_perc_2)
+avg_diff_S_time_fuel_2 = mean(diff_S_fuel_perc_2)
+avg_diff_S_SO_fuel_perc_2 = mean(diff_S_SO_fuel_perc_2)
+avg_diff_LB_fuel_perc_2 = mean(diff_LB_fuel_perc_2)
+avg_diff_UB_fuel_perc_2 = mean(diff_UB_fuel_perc_2)
+
+
 %% avg performance for each delay
 % T_v = min(delay_v):max(delay_v);
 % n_T = length(T_v);

@@ -55,25 +55,25 @@ topology_obj.coef_b_link = coefb;
 topology_obj.coef_c_link = coefc;
 topology_obj.coef_d_link = coefd;
 
-%topology_obj.plotTopology();
+topology_obj.plotTopology();
 %topology_obj.plotAll();
 
 source = 1;
 sink = 4;
-T = 10;
-
-[sp_dist, sp_path] = topology_obj.getShortestPath(source, sink);
-[sp_fuel_opt, sp_t_opt, sp_speed_opt, sp_dual_opt] = optimizeSinglePath(source, sink, T, topology_obj, sp_path, 'cvx');
-%[sp_fuel_opt, sp_t_opt, sp_speed_opt, sp_dual_opt] = optimizeSinglePath(source, sink, T, topology_obj, sp_path, 'yalmip');
-
-[w(1),t(1)] = topology_obj.new_weight_with_delay_price_function(1,2,sp_dual_opt);
-[w(2),t(2)] = topology_obj.new_weight_with_delay_price_function(2,3,sp_dual_opt);
-[w(3),t(3)] = topology_obj.new_weight_with_delay_price_function(3,4,sp_dual_opt);
-
-sp_t_opt
-t
-sp_fuel_opt
-dual_vale = sum(w) - sp_dual_opt*T
+% T = 10;
+% 
+% [sp_dist, sp_path] = topology_obj.getShortestPath(source, sink);
+% [sp_fuel_opt, sp_t_opt, sp_speed_opt, sp_dual_opt] = optimizeSinglePath(source, sink, T, topology_obj, sp_path, 'cvx');
+% %[sp_fuel_opt, sp_t_opt, sp_speed_opt, sp_dual_opt] = optimizeSinglePath(source, sink, T, topology_obj, sp_path, 'yalmip');
+% 
+% [w(1),t(1)] = topology_obj.new_weight_with_delay_price_function(1,2,sp_dual_opt);
+% [w(2),t(2)] = topology_obj.new_weight_with_delay_price_function(2,3,sp_dual_opt);
+% [w(3),t(3)] = topology_obj.new_weight_with_delay_price_function(3,4,sp_dual_opt);
+% 
+% sp_t_opt
+% t
+% sp_fuel_opt
+% dual_vale = sum(w) - sp_dual_opt*T
 
 
 

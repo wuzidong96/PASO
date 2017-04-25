@@ -220,7 +220,7 @@ classdef Topology < handle
             if(obj.links(edge_tail, edge_head) ~= 1)
                 error('not an edge');
             end
-            lambda_vec = 0:0.1:100;
+            lambda_vec = 0:1:1000;
             new_weight = zeros(length(lambda_vec),1);
             opt_travel_time = zeros(length(lambda_vec),1);
             for nn=1:length(lambda_vec)

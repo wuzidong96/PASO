@@ -906,7 +906,7 @@ PASOUtil::writeSolutionToFile(const TPt <TNodeEDatNet<PASONodeData, PASOEdgeData
         ||  std::abs(fuel_cost - fuel_time_fun) > tol)
         {
             std::cout << "not valid solution!" << std::endl;
-            exit(-1);
+            return -1;
         }
               
         //formate: src,des,time,speed,cost, d1, d2
@@ -1007,7 +1007,7 @@ PASOUtil::optimizeSinglePath(const TPt <TNodeEDatNet<PASONodeData, PASOEdgeData>
     
     if(T < sum_time_min)
     {
-        std::cout << "T < sum_time_min, infeasible" << std::endl;
+        std::cout << "T=" << T << "< sum_time_min=" << sum_time_min << ", infeasible" << std::endl;
         return -1;
     }
     
@@ -1824,12 +1824,14 @@ PASOUtil::runOneInstance(const TPt <TNodeEDatNet<PASONodeData, PASOEdgeData> >& 
         return -1;
     }
     ///terminate if T is larger than sum_time_min+10
-    if(T > minimal_path_hours + 10.0 - 1e-10)
+    /* ignore this filter when considering the delay percentage effect, 20170430
+	if(T > minimal_path_hours + 10.0 - 1e-10)
     {
         std::cout << "T > minimal_path_hours + 10.0, terminate" << std::endl; 
         return -1;
     }    
-
+	*/
+	
     ///do not optimize the fastest path, but just use the max speed (min time) over the fastest path
     ret = PASOUtil::getSinglePathWithTimeMin(PNet, path_fastest, source, sink, T, sol_fastest_path_time_min);
     std::cout << "sol_fastest_path_time_min: " << sol_fastest_path_time_min << std::endl;
@@ -1917,9 +1919,15 @@ PASOUtil::runOneInstance(const TPt <TNodeEDatNet<PASONodeData, PASOEdgeData> >& 
     13 shortest_path_opt: time (hours)
     14 shortest_path_opt: distance (miles)
     15 shortest_path_opt: fuel (gallons)
-    16 optimal_solution: time (hours)
-    17 optimal_solution: distance (miles)
-    18 optimal_solution: fuel (gallons)
+    16 lb_solution: time (hours)
+    17 lb_solution: distance (miles)
+    18 lb_solution: fuel (gallons)
+    19 ub_solution: time (hours)
+    20 ub_solution: distance (miles)
+    21 ub_solution: fuel (gallons)
+    22 optimal_solution: time (hours)
+    23 optimal_solution: distance (miles)
+    24 optimal_solution: fuel (gallons)
     ********************************************************/   
     std::ofstream ofs(info_file.c_str(), std::fstream::trunc);
     std::cout <<"write info to file " << info_file << std::endl;

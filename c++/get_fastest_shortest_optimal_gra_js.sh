@@ -4,9 +4,9 @@ des=$2
 T=$3
 instance=$1_$2_$3
 #echo $instance
-./convert_gra_js.sh result/fastest_path_${instance}.gra > trash_fastest
-./convert_gra_js.sh result/shortest_path_${instance}.gra > trash_shortest
-./convert_gra_js.sh result/optimal_path_${instance}.gra > trash_optimal
+./convert_gra_js.sh result/T800/path/path_fastest_${instance}.gra > trash_fastest
+./convert_gra_js.sh result/T800/path/path_shortest_${instance}.gra > trash_shortest
+./convert_gra_js.sh result/T800/path/path_opt_${instance}.gra > trash_optimal
 
 cat show_path_part_1.html \
     trash_fastest \

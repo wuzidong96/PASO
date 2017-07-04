@@ -36,27 +36,19 @@ PASONodeData.cpp\
 PASOEdgeData.cpp\
 PASOSolution.cpp\
 PASOUtil.cpp\
-OBJS = $(SRCS:.cpp=.o)
+main.cpp
 
-SRCS_MAIN = $(SRCS) + main.cpp
-OBJS_MAIN = $(OBJS) + main.o
-SRCS_MAIN_22 = $(SRCS) + main_22_node.cpp
-OBJS_MAIN_22 = $(OBJS) + main_22_node.o
+OBJS = $(SRCS:.cpp=.o)
 	
 ## Main application file
 TAR = \
-	../main\
-    ../main_22_node
+	../main
 
 all: $(TAR)
 
 # COMPILE
-#$(TAR): $(OBJS)
-#	$(CC) $(CXXFLAGS) $(INC) $(LIBINC) $(LDFLAGS) $(CSNAP)/Snap.o $(OBJS) $(LIBS) -o $@ 
-../main: $(OBJS_MAIN)
-	$(CC) $(CXXFLAGS) $(INC) $(LIBINC) $(LDFLAGS) $(CSNAP)/Snap.o $(OBJS_MAIN) $(LIBS) -o $@     
-../main_22_node: $(OBJS_MAIN_22)
-	$(CC) $(CXXFLAGS) $(INC) $(LIBINC) $(LDFLAGS) $(CSNAP)/Snap.o $(OBJS_MAIN_22) $(LIBS) -o $@    
+$(TAR): $(OBJS)
+	$(CC) $(CXXFLAGS) $(INC) $(LIBINC) $(LDFLAGS) $(CSNAP)/Snap.o $(OBJS) $(LIBS) -o $@ 
 
 %.o: %.cpp
 	$(CC) $(CXXFLAGS) $(INC) $(LIBINC) $(LDFLAGS) $(LIBS) -o $@ -c $<

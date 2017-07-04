@@ -1,0 +1,43 @@
+  map.addObject(new H.map.Polyline(
+    strip, { style: { lineWidth: 4, strokeColor: 'rgba(0, 255, 0, 1)'}}
+  ));  
+}
+
+
+
+
+
+/**
+ * Boilerplate map initialization code starts below:
+ */
+
+//Step 1: initialize communication with the platform
+var platform = new H.service.Platform({
+  app_id: 'DemoAppId01082013GAL',
+  app_code: 'AJKnXv84fjrb0KIHawS0Tg',
+  useCIT: true,
+  useHTTPS: true
+});
+var defaultLayers = platform.createDefaultLayers();
+
+//Step 2: initialize a map - this map is centered over US
+var map = new H.Map(document.getElementById('map'),
+  defaultLayers.normal.map,{
+  center: {lat:40, lng:-97},
+  zoom: 5
+});
+
+//Step 3: make the map interactive
+// MapEvents enables the event system
+// Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+// Create the default UI components
+var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+
+// Now use the map as required...
+addPolylineToMap(map);
+  </script>
+</body>
+</html>

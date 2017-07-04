@@ -1919,15 +1919,9 @@ PASOUtil::runOneInstance(const TPt <TNodeEDatNet<PASONodeData, PASOEdgeData> >& 
     13 shortest_path_opt: time (hours)
     14 shortest_path_opt: distance (miles)
     15 shortest_path_opt: fuel (gallons)
-    16 lb_solution: time (hours)
-    17 lb_solution: distance (miles)
-    18 lb_solution: fuel (gallons)
-    19 ub_solution: time (hours)
-    20 ub_solution: distance (miles)
-    21 ub_solution: fuel (gallons)
-    22 optimal_solution: time (hours)
-    23 optimal_solution: distance (miles)
-    24 optimal_solution: fuel (gallons)
+    16 optimal_solution: time (hours)
+    17 optimal_solution: distance (miles)
+    18 optimal_solution: fuel (gallons)
     ********************************************************/   
     std::ofstream ofs(info_file.c_str(), std::fstream::trunc);
     std::cout <<"write info to file " << info_file << std::endl;

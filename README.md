@@ -53,6 +53,10 @@ to zoom in the map to see more details.
 ./main 1 2 10
 ~~~
 The output solutions will be stored in the result/T800 folder
+- Make all bash scripts to be excutable
+~~~
+chmod +x *.sh
+~~~
 - To generate html file to display the path information in the browser, run "./get_show_path_html.sh source-id(1-22) sinck-id(1-22) T", e.g.,
 ~~~
 ./get_show_path_html.sh 1 2 10

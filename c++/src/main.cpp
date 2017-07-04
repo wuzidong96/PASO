@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
         cout << "source id and sink  id must in [1,22]" << endl;
         return -1;
     }
-    cout << "Running for instance (source_id,sink_id)=" << "(" << source_id << "," << sink_id << ","  << ")" << endl;
+    cout << "Running for instance (source_id,sink_id,T)=" << "(" << source_id << "," << sink_id << ","  << T << ")" << endl;
     
     //several input files
     string node_22_file = "data/22_nodes.txt";

@@ -1,4 +1,5 @@
 #! /bin/awk -f
+# ./get_40_regions_nodes.awk node_info.csv
 # print will output with an ORS after each statement
 # print will output with an OFS in the same statement for more than one items, such as print $1, $2
 # printf will not be influenced by ORS and OFS. You should output ORS and OFS explicitly, such as, printf $0; printf "\n";

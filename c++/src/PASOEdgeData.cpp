@@ -581,8 +581,8 @@ PASOEdgeData::updateGphSpeedLimits()
         }
         else if(d < -tol)
         {
-            //20170718: there is a bug here. Originall it is t=t, which will make 
-            //the speed/time region smaller (a proper subset of true region).
+            //20170718: there is a bug here. Originally it is t=t, which will make 
+            //the speed/time region smaller (a proper subset of true speed/time region).
             //But c(t) in this region is still strictly convex and
             //strictly decreasing and thus the later implementation and results still hold.            
             //t = t;

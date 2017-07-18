@@ -581,7 +581,12 @@ PASOEdgeData::updateGphSpeedLimits()
         }
         else if(d < -tol)
         {
-            t = t;
+            //20170718: there is a bug here. Originall it is t=t, which will make 
+            //the speed/time region smaller (a proper subset of truck region).
+            //But c(t) in this region is still strictly convex and
+            //strictly decreasing and thus the later implementation and results still hold.            
+            //t = t;
+            t1 = t;
         }
         t = (t1 + t2)/2.0;
         d = gphFuelTimeFunD1(t);

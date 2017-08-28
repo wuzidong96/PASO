@@ -20,7 +20,7 @@ CXXFLAGS += -O3 -DNDEBUG
 # turn on for crash debugging, get symbols with <prog> 2>&1 | c++filt
 #CXXFLAGS += -g -rdynamic
 CXXOPENMP = -fopenmp
-LDFLAGS +=
+LDFLAGS += $(CXXOPENMP)
 LIBS += -lrt
 
 #for  geographic
